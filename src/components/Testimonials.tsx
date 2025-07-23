@@ -6,30 +6,23 @@ export const Testimonials = () => {
     {
       name: "Carlos Silva",
       role: "Gerente de Vendas",
-      text: "Depois do curso, fui promovido e hoje lidero reuniões com total segurança. Minha comunicação mudou completamente!",
+      text: "Não sabia que minha voz podia ter esse poder.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
     },
     {
       name: "Ana Costa",
       role: "Empresária",
-      text: "Superei minha timidez e agora gravo vídeos para minha empresa sem medo. O Clube da Oratória transformou minha vida profissional.",
+      text: "Finalmente consegui participar de uma reunião sem travar.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
     },
     {
       name: "Roberto Mendes",
       role: "Advogado",
-      text: "Aprendi a me expressar com autenticidade e firmeza. Minhas apresentações no tribunal são muito mais impactantes agora.",
+      text: "Comecei a fazer lives e vender sem ter vergonha.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      name: "Juliana Santos",
-      role: "Coach",
-      text: "O método das 3 dimensões é revolucionário. Consegui aumentar minha autoridade e conquistar mais clientes através da comunicação.",
-      rating: 5,
-      avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face"
     }
   ];
 
@@ -38,10 +31,10 @@ export const Testimonials = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            O que nossos alunos <span className="text-primary">dizem</span>
+            🔔 Provas Sociais
           </h2>
           <p className="text-xl text-muted-foreground text-center mb-12">
-            Transformações reais de pessoas como você
+            O que dizem os alunos
           </p>
           
           <div className="grid md:grid-cols-2 gap-8">

@@ -19,7 +19,9 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         cta: "bg-gradient-primary text-white font-semibold shadow-brand hover:shadow-lg hover:scale-105 transform transition-all duration-300",
-        hero: "bg-primary text-primary-foreground hover:bg-primary/90 font-bold text-lg shadow-brand hover:shadow-lg hover:scale-105 transform"
+        "cta-pulse": "bg-gradient-primary text-white font-semibold shadow-brand animate-pulse-cta",
+        hero: "bg-primary text-primary-foreground hover:bg-primary/90 font-bold text-lg shadow-brand hover:shadow-lg hover:scale-105 transform",
+        whatsapp: "bg-green-500 text-white font-semibold hover:bg-green-600 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
       },
       size: {
         default: "h-10 px-4 py-2",

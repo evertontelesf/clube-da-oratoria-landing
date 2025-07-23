@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 5%;
 
-    --primary: 142 100% 41%;
+    --primary: 30 100% 50%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 0 0% 8%;
@@ -26,29 +26,32 @@ All colors MUST be HSL.
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 142 100% 41%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 45 100% 60%;
+    --accent-foreground: 0 0% 5%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 142 100% 41%;
+    --ring: 30 100% 50%;
 
     --radius: 0.75rem;
 
     /* Custom design tokens */
     --brand-black: 0 0% 5%;
-    --brand-green: 142 100% 41%;
-    --brand-green-dark: 142 100% 19%;
+    --brand-orange: 30 100% 50%;
+    --brand-orange-dark: 25 100% 45%;
+    --brand-yellow: 45 100% 60%;
+    --brand-yellow-light: 50 100% 70%;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--brand-green)) 0%, hsl(var(--brand-green-dark)) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-black)) 0%, hsl(var(--brand-black)) 50%, hsl(var(--brand-green-dark)) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--brand-orange)) 0%, hsl(var(--brand-orange-dark)) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--brand-yellow)) 0%, hsl(var(--brand-orange)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-black)) 0%, hsl(var(--brand-black)) 50%, hsl(var(--brand-orange-dark)) 100%);
     
     /* Shadows */
-    --shadow-brand: 0 10px 30px -10px hsl(var(--brand-green) / 0.3);
+    --shadow-brand: 0 10px 30px -10px hsl(var(--brand-orange) / 0.3);
     --shadow-card: 0 4px 20px -4px hsl(var(--brand-black) / 0.1);
     
     /* Animations */

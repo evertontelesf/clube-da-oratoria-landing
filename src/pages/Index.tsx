@@ -1,27 +1,33 @@
-import { Hero } from "@/components/Hero";
-import { About } from "@/components/About";
-import { TargetAudience } from "@/components/TargetAudience";
-import { Benefits } from "@/components/Benefits";
-import { Method } from "@/components/Method";
+import { VVVHero } from "@/components/VVVHero";
+import { VVVProduct } from "@/components/VVVProduct";
+import { VVVTargetAudience } from "@/components/VVVTargetAudience";
+import { VVVPillars } from "@/components/VVVPillars";
+import { VVVContent } from "@/components/VVVContent";
+import { VVVCreator } from "@/components/VVVCreator";
 import { Testimonials } from "@/components/Testimonials";
-import { Curriculum } from "@/components/Curriculum";
-import { Pricing } from "@/components/Pricing";
+import { VVVOffer } from "@/components/VVVOffer";
+import { VVVObjections } from "@/components/VVVObjections";
 import { FAQ } from "@/components/FAQ";
+import { VVVFinalCTA } from "@/components/VVVFinalCTA";
 import { Footer } from "@/components/Footer";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <Hero />
-      <About />
-      <TargetAudience />
-      <Benefits />
-      <Method />
+      <VVVHero />
+      <VVVProduct />
+      <VVVTargetAudience />
+      <VVVPillars />
+      <VVVContent />
+      <VVVCreator />
       <Testimonials />
-      <Curriculum />
-      <Pricing />
+      <VVVOffer />
+      <VVVObjections />
       <FAQ />
+      <VVVFinalCTA />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

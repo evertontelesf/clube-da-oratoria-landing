@@ -1,15 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, Shield, Infinity, ArrowRight } from "lucide-react";
+import { Shield, CheckCircle, ArrowRight } from "lucide-react";
 
-export const Pricing = () => {
+export const VVVOffer = () => {
   const features = [
-    "Acesso vitalício a todo o conteúdo",
-    "4 módulos completos com 41 aulas",
-    "Atualizações futuras incluídas",
-    "Suporte exclusivo via WhatsApp",
-    "Certificado de conclusão",
-    "Exercícios práticos e dinâmicas"
+    "Mais de 6 horas de conteúdo exclusivo",
+    "4 módulos completos + aula inaugural", 
+    "Atividades práticas para aplicar",
+    "Mentorias gravadas exclusivas",
+    "Comunidade fechada de alunos",
+    "Certificado de conclusão"
   ];
 
   return (
@@ -17,22 +17,25 @@ export const Pricing = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-            Investimento e <span className="text-primary">Garantia</span>
+            🚀 Oferta <span className="text-accent">Especial</span>
           </h2>
           <p className="text-xl text-gray-300 mb-12">
-            Transforme sua comunicação com um investimento que cabe no seu bolso
+            Transforme sua comunicação agora com condições exclusivas
           </p>
           
-          <Card className="shadow-brand border-2 border-primary/30 bg-white/95 backdrop-blur-sm">
+          <Card className="shadow-brand border-2 border-accent/30 bg-white/95 backdrop-blur-sm">
             <CardContent className="p-8">
               <div className="text-center mb-8">
-                <div className="inline-block bg-primary/10 rounded-full px-6 py-2 mb-4">
-                  <span className="text-primary font-semibold">OFERTA LIMITADA</span>
+                <div className="inline-block bg-red-100 text-red-800 rounded-full px-6 py-2 mb-4 font-semibold">
+                  🔥 OFERTA LIMITADA
                 </div>
                 
                 <div className="mb-6">
-                  <span className="text-6xl font-bold text-foreground">R$ 697</span>
-                  <div className="text-muted-foreground mt-2">
+                  <div className="flex items-center justify-center gap-4 mb-4">
+                    <span className="text-2xl text-muted-foreground line-through">De R$ 997</span>
+                    <span className="text-6xl font-bold text-foreground">R$ 697</span>
+                  </div>
+                  <div className="text-muted-foreground">
                     à vista ou <strong className="text-foreground">12x de R$ 69,90</strong>
                   </div>
                 </div>
@@ -41,10 +44,6 @@ export const Pricing = () => {
                   <div className="flex items-center gap-2 bg-green-100 text-green-800 px-4 py-2 rounded-full">
                     <Shield size={20} />
                     <span className="font-medium">7 dias de garantia</span>
-                  </div>
-                  <div className="flex items-center gap-2 bg-blue-100 text-blue-800 px-4 py-2 rounded-full">
-                    <Infinity size={20} />
-                    <span className="font-medium">Acesso vitalício</span>
                   </div>
                 </div>
               </div>
@@ -58,20 +57,14 @@ export const Pricing = () => {
                 ))}
               </div>
               
-              <div className="bg-primary/5 rounded-lg p-6 mb-8">
-                <h4 className="font-bold text-lg mb-2">🎁 Bônus Exclusivos Incluídos:</h4>
-                <p className="text-muted-foreground">
-                  Acesso vitalício + todas as atualizações futuras + suporte exclusivo
-                </p>
-              </div>
-              
-              <Button variant="cta" size="xl" className="w-full mb-4">
-                Quero entrar agora
+              <Button variant="cta-pulse" size="xl" className="w-full mb-4">
+                Quero me comunicar com confiança
                 <ArrowRight className="ml-2" />
               </Button>
               
               <p className="text-sm text-muted-foreground">
-                Satisfação 100% garantida ou seu dinheiro de volta em 7 dias
+                ✅ Garantia incondicional de 7 dias. Se não gostar do curso por qualquer motivo, 
+                devolvemos 100% do valor.
               </p>
             </CardContent>
           </Card>
