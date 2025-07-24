@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Play, ArrowRight } from "lucide-react";
+import { Play } from "lucide-react";
 import heroBackground from "@/assets/hero-bg-orange.jpg";
 import logo from "@/assets/logo.png";
 
@@ -23,7 +23,7 @@ export const VVVHero = () => {
             </h1>
             
             <h2 className="text-xl md:text-2xl mb-8 text-gray-300 leading-relaxed">
-              mesmo que você sinta vergonha, insegurança ou não saiba por onde começar.
+              — mesmo que você sinta vergonha, insegurança ou não saiba por onde começar.
             </h2>
           </div>
           
@@ -35,23 +35,18 @@ export const VVVHero = () => {
           </div>
           
           {/* VSL Placeholder */}
-          <div className="relative bg-black/50 rounded-xl p-8 mb-8 border-2 border-brand-orange/30">
+          <div className="relative bg-black/50 rounded-xl p-8 mb-8 border-2 border-accent/30">
             <div className="aspect-video bg-gray-800 rounded-lg flex items-center justify-center mb-6">
               <div className="text-center">
-                <Play className="mx-auto mb-4 text-brand-orange" size={64} />
-                <p className="text-xl text-gray-300">Aula Gratuita</p>
-                <p className="text-sm text-gray-400">Assista à aula e entenda como a comunicação muda tudo</p>
+                <Play className="mx-auto mb-4 text-accent" size={64} />
+                <p className="text-xl text-gray-300">Vídeo de Vendas de Valor (VSL)</p>
+                <p className="text-sm text-gray-400">Assista ao vídeo e entenda como a comunicação muda tudo</p>
               </div>
             </div>
-            <p className="text-lg font-medium text-brand-orange">
-              Assista à aula acima e entenda como a comunicação muda tudo.
+            <p className="text-lg font-medium text-accent">
+              🎥 Assista ao vídeo acima e entenda como a comunicação muda tudo.
             </p>
           </div>
-          
-          <Button variant="cta-pulse" size="xl" className="w-full mb-8">
-            Quero me comunicar com confiança
-            <ArrowRight className="ml-2" />
-          </Button>
         </div>
       </div>
     </section>

@@ -30,19 +30,19 @@ export const VVVObjections = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-hero">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
-            Objeções <span className="text-brand-orange">Comuns</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+            🚫 Objeções <span className="text-primary">Comuns</span>
           </h2>
-          <p className="text-xl text-gray-300 text-center mb-12">
+          <p className="text-xl text-muted-foreground text-center mb-12">
             Respondendo suas principais dúvidas
           </p>
           
           <div className="grid md:grid-cols-2 gap-6">
             {objections.map((item, index) => (
-              <Card key={index} className="shadow-card-brand border-2 border-brand-orange/20 bg-white/95 backdrop-blur-sm">
+              <Card key={index} className="shadow-card-brand border-2 border-primary/10">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4 mb-4">
                     <X className="text-red-500 mt-1 flex-shrink-0" size={24} />
@@ -52,7 +52,7 @@ export const VVVObjections = () => {
                   </div>
                   
                   <div className="flex items-start gap-4">
-                    <CheckCircle className="text-brand-orange mt-1 flex-shrink-0" size={24} />
+                    <CheckCircle className="text-primary mt-1 flex-shrink-0" size={24} />
                     <p className="text-muted-foreground">
                       {item.response}
                     </p>

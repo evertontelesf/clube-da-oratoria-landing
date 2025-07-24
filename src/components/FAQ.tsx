@@ -33,28 +33,28 @@ export const FAQ = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-hero">
+    <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
-            Perguntas <span className="text-brand-orange">Frequentes</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+            Perguntas <span className="text-primary">Frequentes</span>
           </h2>
-          <p className="text-xl text-gray-300 text-center mb-12">
+          <p className="text-xl text-muted-foreground text-center mb-12">
             Esclarecemos as principais dúvidas sobre o curso
           </p>
           
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <Card key={index} className="shadow-card-brand border-2 border-brand-orange/20 overflow-hidden bg-white/95 backdrop-blur-sm">
+              <Card key={index} className="shadow-card-brand border-2 border-primary/10 overflow-hidden">
                 <CardContent className="p-0">
                   <button
                     onClick={() => setOpenFaq(openFaq === index ? null : index)}
                     className="w-full p-6 text-left hover:bg-muted/50 transition-colors flex items-center justify-between"
                   >
-                    <h3 className="text-lg font-semibold text-foreground">{faq.question}</h3>
+                    <h3 className="text-lg font-semibold">{faq.question}</h3>
                     {openFaq === index ? 
-                      <ChevronDown className="text-brand-orange" size={24} /> : 
-                      <ChevronRight className="text-brand-orange" size={24} />
+                      <ChevronDown className="text-primary" size={24} /> : 
+                      <ChevronRight className="text-primary" size={24} />
                     }
                   </button>
                   

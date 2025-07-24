@@ -12,19 +12,19 @@ export const VVVTargetAudience = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-hero">
+    <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
-            Para quem é esse <span className="text-brand-orange">curso</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+            💡 Pra quem é esse <span className="text-primary">curso</span>
           </h2>
           
-          <Card className="shadow-card-brand border-2 border-brand-orange/20 bg-white/95 backdrop-blur-sm">
+          <Card className="shadow-card-brand border-2 border-primary/20">
             <CardContent className="p-8">
               <div className="grid gap-6">
                 {targetPoints.map((point, index) => (
                   <div key={index} className="flex items-start gap-4">
-                    <CheckCircle className="text-brand-orange mt-1 flex-shrink-0" size={24} />
+                    <CheckCircle className="text-primary mt-1 flex-shrink-0" size={24} />
                     <p className="text-lg text-foreground">{point}</p>
                   </div>
                 ))}

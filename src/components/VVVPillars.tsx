@@ -21,11 +21,11 @@ export const VVVPillars = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-hero">
+    <section className="py-20 bg-secondary">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
-            Os <span className="text-brand-orange">3 Pilares</span> do Comunicador de Elite
+            ⚡ Os <span className="text-accent">3 Pilares</span> do Comunicador de Elite
           </h2>
           <p className="text-xl text-gray-300 text-center mb-12">
             O que você vai aprender para se tornar um comunicador irresistível
@@ -33,7 +33,7 @@ export const VVVPillars = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             {pillars.map((pillar, index) => (
-              <Card key={index} className="shadow-card-brand hover:shadow-brand transition-all duration-300 bg-white/95 backdrop-blur-sm border-2 border-brand-orange/20">
+              <Card key={index} className="shadow-card-brand hover:shadow-brand transition-all duration-300 bg-white/95 backdrop-blur-sm">
                 <CardContent className="p-8 text-center">
                   <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
                     <pillar.icon className="text-white" size={40} />
