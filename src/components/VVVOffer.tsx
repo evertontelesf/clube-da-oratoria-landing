@@ -17,17 +17,17 @@ export const VVVOffer = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-            🚀 Oferta <span className="text-accent">Especial</span>
+            Oferta <span className="text-brand-orange">Especial</span>
           </h2>
           <p className="text-xl text-gray-300 mb-12">
             Transforme sua comunicação agora com condições exclusivas
           </p>
           
-          <Card className="shadow-brand border-2 border-accent/30 bg-white/95 backdrop-blur-sm">
+          <Card className="shadow-brand border-2 border-brand-orange/30 bg-white/95 backdrop-blur-sm">
             <CardContent className="p-8">
               <div className="text-center mb-8">
                 <div className="inline-block bg-red-100 text-red-800 rounded-full px-6 py-2 mb-4 font-semibold">
-                  🔥 OFERTA LIMITADA
+                  OFERTA LIMITADA
                 </div>
                 
                 <div className="mb-6">
@@ -51,7 +51,7 @@ export const VVVOffer = () => {
               <div className="grid md:grid-cols-2 gap-4 mb-8">
                 {features.map((feature, index) => (
                   <div key={index} className="flex items-center gap-3">
-                    <CheckCircle className="text-primary flex-shrink-0" size={20} />
+                    <CheckCircle className="text-brand-orange flex-shrink-0" size={20} />
                     <span className="text-foreground">{feature}</span>
                   </div>
                 ))}
@@ -63,7 +63,7 @@ export const VVVOffer = () => {
               </Button>
               
               <p className="text-sm text-muted-foreground">
-                ✅ Garantia incondicional de 7 dias. Se não gostar do curso por qualquer motivo, 
+                Garantia incondicional de 7 dias. Se não gostar do curso por qualquer motivo, 
                 devolvemos 100% do valor.
               </p>
             </CardContent>

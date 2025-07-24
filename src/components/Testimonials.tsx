@@ -27,22 +27,22 @@ export const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-20 bg-gradient-hero">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            🔔 Provas Sociais
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
+            Provas Sociais
           </h2>
-          <p className="text-xl text-muted-foreground text-center mb-12">
+          <p className="text-xl text-gray-300 text-center mb-12">
             O que dizem os alunos
           </p>
           
           <div className="grid md:grid-cols-2 gap-8">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="shadow-card-brand hover:shadow-brand transition-all duration-300 border-2 border-primary/10">
+              <Card key={index} className="shadow-card-brand hover:shadow-brand transition-all duration-300 border-2 border-brand-orange/20 bg-white/95 backdrop-blur-sm">
                 <CardContent className="p-6">
                   <div className="flex items-start mb-4">
-                    <Quote className="text-primary mr-2 flex-shrink-0" size={24} />
+                    <Quote className="text-brand-orange mr-2 flex-shrink-0" size={24} />
                     <p className="text-foreground italic leading-relaxed">{testimonial.text}</p>
                   </div>
                   
