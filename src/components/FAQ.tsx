@@ -20,7 +20,7 @@ export const FAQ = () => {
     },
     {
       question: "Por quanto tempo terei acesso?",
-      answer: "O acesso é vitalício! Você pode fazer o curso no seu ritmo e revisitar o conteúdo sempre que quiser. Também incluímos todas as atualizações futuras sem custo adicional."
+      answer: "Você pode fazer o curso no seu ritmo e revisitar o conteúdo sempre que quiser. O acesso é garantido por tempo determinado conforme descrito na oferta."
     },
     {
       question: "Funciona para pessoas muito tímidas?",
@@ -33,13 +33,13 @@ export const FAQ = () => {
   ];
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-32 bg-gradient-hero">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
             Perguntas <span className="text-primary">Frequentes</span>
           </h2>
-          <p className="text-xl text-muted-foreground text-center mb-12">
+          <p className="text-xl text-gray-300 text-center mb-12">
             Esclarecemos as principais dúvidas sobre o curso
           </p>
           

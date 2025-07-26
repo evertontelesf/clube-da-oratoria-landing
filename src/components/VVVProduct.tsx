@@ -2,11 +2,11 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export const VVVProduct = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-32 bg-gradient-hero">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-8">
-            📚 O que é o <span className="text-primary">Clube da Oratória</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 text-white">
+            O que é o <span className="text-primary">Clube da Oratória</span>
           </h2>
           
           <Card className="shadow-card-brand border-2 border-primary/20">
@@ -18,9 +18,9 @@ export const VVVProduct = () => {
                 de se expressar, ganhar carisma e comunicar com autoridade.
               </p>
               
-              <div className="bg-accent/10 rounded-lg p-6">
-                <p className="text-lg font-medium text-center">
-                  🔎 Não importa se você é tímido, travado ou sente que não nasceu para falar bem: 
+              <div className="bg-primary/10 rounded-lg p-6">
+                <p className="text-lg font-medium text-center text-primary">
+                  Não importa se você é tímido, travado ou sente que não nasceu para falar bem: 
                   é aqui que você vai virar esse jogo.
                 </p>
               </div>

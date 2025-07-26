@@ -1,5 +1,6 @@
 import { CheckCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export const VVVTargetAudience = () => {
   const targetPoints = [
@@ -12,11 +13,11 @@ export const VVVTargetAudience = () => {
   ];
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-32 bg-gradient-hero">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
-            💡 Pra quem é esse <span className="text-primary">curso</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+            Pra quem é esse <span className="text-primary">curso</span>
           </h2>
           
           <Card className="shadow-card-brand border-2 border-primary/20">
@@ -31,6 +32,12 @@ export const VVVTargetAudience = () => {
               </div>
             </CardContent>
           </Card>
+          
+          <div className="text-center mt-12">
+            <Button variant="cta" size="xl">
+              Quero me comunicar com confiança
+            </Button>
+          </div>
         </div>
       </div>
     </section>

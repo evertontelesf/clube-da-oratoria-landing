@@ -30,13 +30,13 @@ export const VVVObjections = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-32 bg-gradient-hero">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            🚫 Objeções <span className="text-primary">Comuns</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
+            Objeções <span className="text-primary">Comuns</span>
           </h2>
-          <p className="text-xl text-muted-foreground text-center mb-12">
+          <p className="text-xl text-gray-300 text-center mb-12">
             Respondendo suas principais dúvidas
           </p>
           

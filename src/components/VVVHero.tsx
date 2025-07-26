@@ -5,7 +5,7 @@ import logo from "@/assets/logo.png";
 
 export const VVVHero = () => {
   return (
-    <section className="py-20 bg-gradient-hero text-white">
+    <section className="py-32 bg-gradient-hero text-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
@@ -16,8 +16,8 @@ export const VVVHero = () => {
             />
             
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Descubra como desenvolver uma comunicação{" "}
-              <span className="bg-gradient-secondary bg-clip-text text-transparent">
+              Aula: Descubra como desenvolver uma comunicação{" "}
+              <span className="text-primary">
                 autêntica, confiante e irresistível
               </span>
             </h1>
@@ -38,14 +38,17 @@ export const VVVHero = () => {
           <div className="relative bg-black/50 rounded-xl p-8 mb-8 border-2 border-accent/30">
             <div className="aspect-video bg-gray-800 rounded-lg flex items-center justify-center mb-6">
               <div className="text-center">
-                <Play className="mx-auto mb-4 text-accent" size={64} />
-                <p className="text-xl text-gray-300">Vídeo de Vendas de Valor (VSL)</p>
-                <p className="text-sm text-gray-400">Assista ao vídeo e entenda como a comunicação muda tudo</p>
+                <Play className="mx-auto mb-4 text-primary" size={64} />
+                <p className="text-xl text-gray-300">Aula Gratuita</p>
+                <p className="text-sm text-gray-400">Assista à aula e entenda como a comunicação muda tudo</p>
               </div>
             </div>
-            <p className="text-lg font-medium text-accent">
-              🎥 Assista ao vídeo acima e entenda como a comunicação muda tudo.
+            <p className="text-lg font-medium text-primary mb-6">
+              Assista à aula acima e entenda como a comunicação muda tudo.
             </p>
+            <Button variant="cta" size="xl" className="w-full md:w-auto">
+              Quero adquirir o curso agora
+            </Button>
           </div>
         </div>
       </div>

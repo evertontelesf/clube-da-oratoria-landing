@@ -113,12 +113,21 @@ export default {
 						transform: 'scale(1.05)',
 						opacity: '0.9'
 					}
+				},
+				'pulse-border': {
+					'0%, 100%': {
+						'box-shadow': '0 0 0 0 hsl(var(--primary) / 0.4)'
+					},
+					'50%': {
+						'box-shadow': '0 0 0 8px hsl(var(--primary) / 0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'pulse-cta': 'pulse-cta 2s ease-in-out infinite'
+				'pulse-cta': 'pulse-cta 2s ease-in-out infinite',
+				'pulse-border': 'pulse-border 2s ease-in-out infinite'
 			}
 		}
 	},

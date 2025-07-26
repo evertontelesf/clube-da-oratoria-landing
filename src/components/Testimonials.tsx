@@ -27,13 +27,13 @@ export const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-32 bg-gradient-hero">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            🔔 Provas Sociais
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
+            Provas Sociais
           </h2>
-          <p className="text-xl text-muted-foreground text-center mb-12">
+          <p className="text-xl text-gray-300 text-center mb-12">
             O que dizem os alunos
           </p>
           
