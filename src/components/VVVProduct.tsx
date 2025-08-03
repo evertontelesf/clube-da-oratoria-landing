@@ -1,6 +1,12 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import { LeadCaptureDialog } from "./LeadCaptureDialog";
 
 export const VVVProduct = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
   return (
     <section className="py-32 bg-gradient-hero">
       <div className="container mx-auto px-4">
@@ -24,10 +30,26 @@ export const VVVProduct = () => {
                   é aqui que você vai virar esse jogo.
                 </p>
               </div>
+              
+              <div className="text-center mt-8">
+                <Button 
+                  variant="cta" 
+                  size="xl"
+                  onClick={() => setIsDialogOpen(true)}
+                >
+                  Quero me comunicar com confiança
+                  <ArrowRight className="ml-2" />
+                </Button>
+              </div>
             </CardContent>
           </Card>
         </div>
       </div>
+      
+      <LeadCaptureDialog 
+        open={isDialogOpen} 
+        onOpenChange={setIsDialogOpen} 
+      />
     </section>
   );
 };

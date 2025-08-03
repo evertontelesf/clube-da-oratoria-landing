@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, Play } from "lucide-react";
 
 export const Testimonials = () => {
   const testimonials = [
@@ -27,7 +27,7 @@ export const Testimonials = () => {
   ];
 
   return (
-    <section className="py-32 bg-gradient-hero">
+    <section className="py-32 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
@@ -37,7 +37,7 @@ export const Testimonials = () => {
             O que dizem os alunos
           </p>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="shadow-card-brand hover:shadow-brand transition-all duration-300 border-2 border-primary/10">
                 <CardContent className="p-6">
@@ -68,6 +68,27 @@ export const Testimonials = () => {
                 </CardContent>
               </Card>
             ))}
+            
+            {/* Placeholder for video testimonials - user will add manually */}
+            <Card className="shadow-card-brand border-2 border-primary/10 flex items-center justify-center min-h-[300px]">
+              <CardContent className="p-6 text-center">
+                <div className="text-muted-foreground">
+                  <Play size={48} className="mx-auto mb-4 text-primary" />
+                  <p>Espaço para vídeo depoimento</p>
+                  <p className="text-sm mt-2">(adicionar manualmente)</p>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <Card className="shadow-card-brand border-2 border-primary/10 flex items-center justify-center min-h-[300px]">
+              <CardContent className="p-6 text-center">
+                <div className="text-muted-foreground">
+                  <Play size={48} className="mx-auto mb-4 text-primary" />
+                  <p>Espaço para vídeo depoimento</p>
+                  <p className="text-sm mt-2">(adicionar manualmente)</p>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>

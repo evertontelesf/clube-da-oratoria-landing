@@ -1,10 +1,14 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import { LeadCaptureDialog } from "./LeadCaptureDialog";
 
 export const VVVFinalCTA = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
   return (
-    <section className="py-32 bg-gradient-hero">
+    <section className="py-32 bg-gradient-subtle">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
@@ -35,7 +39,12 @@ export const VVVFinalCTA = () => {
                 </div>
               </div>
               
-              <Button variant="cta-pulse" size="xl" className="w-full mb-6">
+              <Button 
+                variant="cta-pulse" 
+                size="xl" 
+                className="w-full mb-6"
+                onClick={() => setIsDialogOpen(true)}
+              >
                 Quero me comunicar com confiança
                 <ArrowRight className="ml-2" />
               </Button>
@@ -52,6 +61,11 @@ export const VVVFinalCTA = () => {
           </p>
         </div>
       </div>
+      
+      <LeadCaptureDialog 
+        open={isDialogOpen} 
+        onOpenChange={setIsDialogOpen} 
+      />
     </section>
   );
 };

@@ -1,9 +1,13 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
 import heroBackground from "@/assets/hero-bg-orange.jpg";
 import logo from "@/assets/logo.png";
+import { LeadCaptureDialog } from "./LeadCaptureDialog";
 
 export const VVVHero = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
   return (
     <section className="py-32 bg-gradient-hero text-white">
       <div className="container mx-auto px-4">
@@ -46,12 +50,22 @@ export const VVVHero = () => {
             <p className="text-lg font-medium text-primary mb-6">
               Assista à aula acima e entenda como a comunicação muda tudo.
             </p>
-            <Button variant="cta" size="xl" className="w-full md:w-auto">
+            <Button 
+              variant="cta" 
+              size="xl" 
+              className="w-full md:w-auto"
+              onClick={() => setIsDialogOpen(true)}
+            >
               Quero adquirir o curso agora
             </Button>
           </div>
         </div>
       </div>
+      
+      <LeadCaptureDialog 
+        open={isDialogOpen} 
+        onOpenChange={setIsDialogOpen} 
+      />
     </section>
   );
 };

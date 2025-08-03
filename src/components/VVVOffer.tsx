@@ -1,8 +1,12 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, CheckCircle, ArrowRight } from "lucide-react";
+import { LeadCaptureDialog } from "./LeadCaptureDialog";
 
 export const VVVOffer = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  
   const features = [
     "Mais de 6 horas de conteúdo exclusivo",
     "4 módulos completos + aula inaugural", 
@@ -13,7 +17,7 @@ export const VVVOffer = () => {
   ];
 
   return (
-    <section className="py-32 bg-gradient-hero">
+    <section className="py-32 bg-gradient-subtle">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -28,16 +32,6 @@ export const VVVOffer = () => {
               <div className="text-center mb-8">
                 <div className="inline-block bg-red-100 text-red-800 rounded-full px-6 py-2 mb-4 font-semibold">
                   OFERTA LIMITADA
-                </div>
-                
-                <div className="mb-6">
-                  <div className="flex items-center justify-center gap-4 mb-4">
-                    <span className="text-2xl text-muted-foreground line-through">De R$ 997</span>
-                    <span className="text-6xl font-bold text-foreground">R$ 697</span>
-                  </div>
-                  <div className="text-muted-foreground">
-                    à vista ou <strong className="text-foreground">12x de R$ 69,90</strong>
-                  </div>
                 </div>
                 
                 <div className="flex items-center justify-center gap-4 mb-6">
@@ -57,7 +51,12 @@ export const VVVOffer = () => {
                 ))}
               </div>
               
-              <Button variant="cta-pulse" size="xl" className="w-full mb-4">
+              <Button 
+                variant="cta-pulse" 
+                size="xl" 
+                className="w-full mb-4"
+                onClick={() => setIsDialogOpen(true)}
+              >
                 Quero me comunicar com confiança
                 <ArrowRight className="ml-2" />
               </Button>
@@ -70,6 +69,11 @@ export const VVVOffer = () => {
           </Card>
         </div>
       </div>
+      
+      <LeadCaptureDialog 
+        open={isDialogOpen} 
+        onOpenChange={setIsDialogOpen} 
+      />
     </section>
   );
 };
