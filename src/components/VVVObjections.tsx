@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, X } from "lucide-react";
+import { CheckCircle, X, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { LeadCaptureDialog } from "./LeadCaptureDialog";
 
 export const VVVObjections = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
   const objections = [
     {
       objection: "Mas eu sou muito tímido",
@@ -61,8 +65,24 @@ export const VVVObjections = () => {
               </Card>
             ))}
           </div>
+          
+          <div className="text-center mt-12">
+            <Button 
+              variant="cta" 
+              size="xl"
+              onClick={() => setIsDialogOpen(true)}
+            >
+              Quero me comunicar com confiança
+              <ArrowRight className="ml-2" />
+            </Button>
+          </div>
         </div>
       </div>
+      
+      <LeadCaptureDialog 
+        open={isDialogOpen} 
+        onOpenChange={setIsDialogOpen} 
+      />
     </section>
   );
 };

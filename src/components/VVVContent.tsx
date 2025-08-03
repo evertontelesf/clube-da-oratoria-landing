@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Play, Users, Gift } from "lucide-react";
+import { Play, Users, Gift, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { LeadCaptureDialog } from "./LeadCaptureDialog";
 
 export const VVVContent = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
   const modules = [
     { title: "Aula Inaugural", description: "Imersiva, com personagens internos" },
     { title: "Módulo 1: Mentalidade", description: "Quebra de crenças e desbloqueio emocional" },
@@ -66,12 +69,22 @@ export const VVVContent = () => {
           </div>
           
           <div className="text-center mt-12">
-            <Button variant="cta" size="xl">
+            <Button 
+              variant="cta" 
+              size="xl"
+              onClick={() => setIsDialogOpen(true)}
+            >
               Quero me comunicar com confiança
+              <ArrowRight className="ml-2" />
             </Button>
           </div>
         </div>
       </div>
+      
+      <LeadCaptureDialog 
+        open={isDialogOpen} 
+        onOpenChange={setIsDialogOpen} 
+      />
     </section>
   );
 };
