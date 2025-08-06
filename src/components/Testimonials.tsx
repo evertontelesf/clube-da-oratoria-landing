@@ -69,24 +69,124 @@ export const Testimonials = () => {
               </Card>
             ))}
             
-            {/* Placeholder for video testimonials - user will add manually */}
-            <Card className="shadow-card-brand border-2 border-primary/10 flex items-center justify-center min-h-[300px]">
-              <CardContent className="p-6 text-center">
-                <div className="text-muted-foreground">
-                  <Play size={48} className="mx-auto mb-4 text-primary" />
-                  <p>Espaço para vídeo depoimento</p>
-                  <p className="text-sm mt-2">(adicionar manualmente)</p>
-                </div>
+            {/* YouTube Video Testimonials */}
+            <Card className="shadow-card-brand border-2 border-primary/10 overflow-hidden">
+              <CardContent className="p-0">
+                <iframe
+                  width="100%"
+                  height="300"
+                  src="https://www.youtube.com/embed/3FYMfHsjb6I"
+                  title="Depoimento YouTube"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-[300px]"
+                />
               </CardContent>
             </Card>
             
-            <Card className="shadow-card-brand border-2 border-primary/10 flex items-center justify-center min-h-[300px]">
-              <CardContent className="p-6 text-center">
-                <div className="text-muted-foreground">
-                  <Play size={48} className="mx-auto mb-4 text-primary" />
-                  <p>Espaço para vídeo depoimento</p>
-                  <p className="text-sm mt-2">(adicionar manualmente)</p>
-                </div>
+            <Card className="shadow-card-brand border-2 border-primary/10 overflow-hidden">
+              <CardContent className="p-0">
+                <iframe
+                  width="100%"
+                  height="300"
+                  src="https://www.youtube.com/embed/uCYfQ2sdaQ8"
+                  title="Depoimento YouTube"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-[300px]"
+                />
+              </CardContent>
+            </Card>
+            
+            <Card className="shadow-card-brand border-2 border-primary/10 overflow-hidden">
+              <CardContent className="p-0">
+                <iframe
+                  width="100%"
+                  height="300"
+                  src="https://www.youtube.com/embed/b1QddrSINZk"
+                  title="Depoimento YouTube"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-[300px]"
+                />
+              </CardContent>
+            </Card>
+            
+            <Card className="shadow-card-brand border-2 border-primary/10 overflow-hidden">
+              <CardContent className="p-0">
+                <iframe
+                  width="100%"
+                  height="300"
+                  src="https://www.youtube.com/embed/_Q75JppuaXo"
+                  title="Depoimento YouTube"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-[300px]"
+                />
+              </CardContent>
+            </Card>
+            
+            <Card className="shadow-card-brand border-2 border-primary/10 overflow-hidden">
+              <CardContent className="p-0">
+                <iframe
+                  width="100%"
+                  height="300"
+                  src="https://www.youtube.com/embed/0kFCHMeRyBE"
+                  title="Depoimento YouTube"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-[300px]"
+                />
+              </CardContent>
+            </Card>
+            
+            <Card className="shadow-card-brand border-2 border-primary/10 overflow-hidden">
+              <CardContent className="p-0">
+                <iframe
+                  width="100%"
+                  height="300"
+                  src="https://www.youtube.com/embed/JSN4K69dMIs"
+                  title="Depoimento YouTube"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-[300px]"
+                />
+              </CardContent>
+            </Card>
+            
+            <Card className="shadow-card-brand border-2 border-primary/10 overflow-hidden">
+              <CardContent className="p-0">
+                <iframe
+                  width="100%"
+                  height="300"
+                  src="https://www.youtube.com/embed/Yiw0CGAFqsk"
+                  title="Depoimento YouTube"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-[300px]"
+                />
+              </CardContent>
+            </Card>
+            
+            <Card className="shadow-card-brand border-2 border-primary/10 overflow-hidden">
+              <CardContent className="p-0">
+                <iframe
+                  width="100%"
+                  height="300"
+                  src="https://www.youtube.com/embed/ONG2Cj4C8ss"
+                  title="Depoimento YouTube"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-[300px]"
+                />
               </CardContent>
             </Card>
           </div>
