@@ -1,5 +1,12 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote, Play } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export const Testimonials = () => {
   const testimonials = [
@@ -26,6 +33,27 @@ export const Testimonials = () => {
     }
   ];
 
+  const imageTestimonials = [
+    "/lovable-uploads/4346bc8f-5c71-42ad-848a-23af9e021ad7.png",
+    "/lovable-uploads/81987eb1-ea1e-4cd6-a475-8a16320ea878.png",
+    "/lovable-uploads/e823ecb8-2ec9-4d6b-bf34-6d409ea70429.png",
+    "/lovable-uploads/fc44aa48-2243-43d6-ad24-1b9695dfa4dd.png",
+    "/lovable-uploads/005d0fe9-bc1c-4f66-9b25-62190d84815c.png",
+    "/lovable-uploads/6335da1c-8a53-46f4-bc10-3d1f30e427ac.png",
+    "/lovable-uploads/1837293b-7ecb-4f2f-bc6a-6121ae15ea4d.png"
+  ];
+
+  const videoTestimonials = [
+    "https://www.youtube.com/embed/3FYMfHsjb6I",
+    "https://www.youtube.com/embed/uCYfQ2sdaQ8",
+    "https://www.youtube.com/embed/b1QddrSINZk",
+    "https://www.youtube.com/embed/_Q75JppuaXo",
+    "https://www.youtube.com/embed/0kFCHMeRyBE",
+    "https://www.youtube.com/embed/JSN4K69dMIs",
+    "https://www.youtube.com/embed/Yiw0CGAFqsk",
+    "https://www.youtube.com/embed/ONG2Cj4C8ss"
+  ];
+
   return (
     <section className="py-32 bg-background">
       <div className="container mx-auto px-4">
@@ -33,162 +61,120 @@ export const Testimonials = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
             Provas Sociais
           </h2>
-          <p className="text-xl text-gray-300 text-center mb-12">
+          <p className="text-xl text-muted-foreground text-center mb-12">
             O que dizem os alunos
           </p>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="shadow-card-brand hover:shadow-brand transition-all duration-300 border-2 border-primary/10">
-                <CardContent className="p-6">
-                  <div className="flex items-start mb-4">
-                    <Quote className="text-primary mr-2 flex-shrink-0" size={24} />
-                    <p className="text-foreground italic leading-relaxed">{testimonial.text}</p>
-                  </div>
-                  
-                  <div className="flex items-center justify-between pt-4 border-t border-border">
-                    <div className="flex items-center">
-                      <img 
-                        src={testimonial.avatar} 
-                        alt={testimonial.name}
-                        className="w-12 h-12 rounded-full mr-4 object-cover"
-                      />
-                      <div>
-                        <h4 className="font-semibold">{testimonial.name}</h4>
-                        <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                      </div>
+          {/* Written Testimonials */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-center mb-8 text-primary">
+              Depoimentos Escritos
+            </h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <Card key={index} className="shadow-card-brand hover:shadow-brand transition-all duration-300 border-2 border-primary/10 bg-card">
+                  <CardContent className="p-6">
+                    <div className="flex items-start mb-4">
+                      <Quote className="text-primary mr-2 flex-shrink-0" size={24} />
+                      <p className="text-card-foreground italic leading-relaxed">{testimonial.text}</p>
                     </div>
                     
-                    <div className="flex">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="text-yellow-400 fill-current" size={16} />
-                      ))}
+                    <div className="flex items-center justify-between pt-4 border-t border-border">
+                      <div className="flex items-center">
+                        <img 
+                          src={testimonial.avatar} 
+                          alt={testimonial.name}
+                          className="w-12 h-12 rounded-full mr-4 object-cover"
+                        />
+                        <div>
+                          <h4 className="font-semibold text-card-foreground">{testimonial.name}</h4>
+                          <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star key={i} className="text-yellow-400 fill-current" size={16} />
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-            
-            {/* YouTube Video Testimonials */}
-            <Card className="shadow-card-brand border-2 border-primary/10 overflow-hidden">
-              <CardContent className="p-0">
-                <iframe
-                  width="100%"
-                  height="300"
-                  src="https://www.youtube.com/embed/3FYMfHsjb6I"
-                  title="Depoimento YouTube"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-[300px]"
-                />
-              </CardContent>
-            </Card>
-            
-            <Card className="shadow-card-brand border-2 border-primary/10 overflow-hidden">
-              <CardContent className="p-0">
-                <iframe
-                  width="100%"
-                  height="300"
-                  src="https://www.youtube.com/embed/uCYfQ2sdaQ8"
-                  title="Depoimento YouTube"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-[300px]"
-                />
-              </CardContent>
-            </Card>
-            
-            <Card className="shadow-card-brand border-2 border-primary/10 overflow-hidden">
-              <CardContent className="p-0">
-                <iframe
-                  width="100%"
-                  height="300"
-                  src="https://www.youtube.com/embed/b1QddrSINZk"
-                  title="Depoimento YouTube"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-[300px]"
-                />
-              </CardContent>
-            </Card>
-            
-            <Card className="shadow-card-brand border-2 border-primary/10 overflow-hidden">
-              <CardContent className="p-0">
-                <iframe
-                  width="100%"
-                  height="300"
-                  src="https://www.youtube.com/embed/_Q75JppuaXo"
-                  title="Depoimento YouTube"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-[300px]"
-                />
-              </CardContent>
-            </Card>
-            
-            <Card className="shadow-card-brand border-2 border-primary/10 overflow-hidden">
-              <CardContent className="p-0">
-                <iframe
-                  width="100%"
-                  height="300"
-                  src="https://www.youtube.com/embed/0kFCHMeRyBE"
-                  title="Depoimento YouTube"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-[300px]"
-                />
-              </CardContent>
-            </Card>
-            
-            <Card className="shadow-card-brand border-2 border-primary/10 overflow-hidden">
-              <CardContent className="p-0">
-                <iframe
-                  width="100%"
-                  height="300"
-                  src="https://www.youtube.com/embed/JSN4K69dMIs"
-                  title="Depoimento YouTube"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-[300px]"
-                />
-              </CardContent>
-            </Card>
-            
-            <Card className="shadow-card-brand border-2 border-primary/10 overflow-hidden">
-              <CardContent className="p-0">
-                <iframe
-                  width="100%"
-                  height="300"
-                  src="https://www.youtube.com/embed/Yiw0CGAFqsk"
-                  title="Depoimento YouTube"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-[300px]"
-                />
-              </CardContent>
-            </Card>
-            
-            <Card className="shadow-card-brand border-2 border-primary/10 overflow-hidden">
-              <CardContent className="p-0">
-                <iframe
-                  width="100%"
-                  height="300"
-                  src="https://www.youtube.com/embed/ONG2Cj4C8ss"
-                  title="Depoimento YouTube"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-[300px]"
-                />
-              </CardContent>
-            </Card>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Image Testimonials Carousel */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-center mb-8 text-primary">
+              Depoimentos em Imagem
+            </h3>
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full max-w-5xl mx-auto"
+            >
+              <CarouselContent className="-ml-1">
+                {imageTestimonials.map((image, index) => (
+                  <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                      <Card className="shadow-card-brand border-2 border-primary/10 overflow-hidden bg-card">
+                        <CardContent className="p-0">
+                          <img 
+                            src={image} 
+                            alt={`Depoimento ${index + 1}`}
+                            className="w-full h-[300px] object-cover"
+                          />
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="text-primary border-primary hover:bg-primary hover:text-primary-foreground" />
+              <CarouselNext className="text-primary border-primary hover:bg-primary hover:text-primary-foreground" />
+            </Carousel>
+          </div>
+
+          {/* Video Testimonials Carousel */}
+          <div>
+            <h3 className="text-2xl font-bold text-center mb-8 text-primary">
+              Depoimentos em Vídeo
+            </h3>
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full max-w-5xl mx-auto"
+            >
+              <CarouselContent className="-ml-1">
+                {videoTestimonials.map((video, index) => (
+                  <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                      <Card className="shadow-card-brand border-2 border-primary/10 overflow-hidden bg-card">
+                        <CardContent className="p-0">
+                          <iframe
+                            width="100%"
+                            height="300"
+                            src={video}
+                            title={`Depoimento YouTube ${index + 1}`}
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            className="w-full h-[300px]"
+                          />
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="text-primary border-primary hover:bg-primary hover:text-primary-foreground" />
+              <CarouselNext className="text-primary border-primary hover:bg-primary hover:text-primary-foreground" />
+            </Carousel>
           </div>
         </div>
       </div>
