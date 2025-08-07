@@ -41,9 +41,7 @@ export const Testimonials = () => {
 
           {/* Image Testimonials Carousel */}
           <div className="mb-16">
-            <h3 className="text-2xl font-bold text-center mb-8 text-primary">
-              Depoimentos em Imagem
-            </h3>
+            <h3 className="text-2xl font-bold text-center mb-8 text-primary">Prints:</h3>
             <Carousel opts={{
             align: "start",
             loop: true
@@ -66,9 +64,7 @@ export const Testimonials = () => {
 
           {/* Video Testimonials Carousel */}
           <div>
-            <h3 className="text-2xl font-bold text-center mb-8 text-primary">
-              Depoimentos em Vídeo
-            </h3>
+            <h3 className="text-2xl font-bold text-center mb-8 text-primary">Gravações:</h3>
             <Carousel opts={{
             align: "start",
             loop: true
