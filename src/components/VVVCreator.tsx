@@ -1,23 +1,15 @@
 import { Card, CardContent } from "@/components/ui/card";
-
 export const VVVCreator = () => {
-  return (
-    <section className="py-32 bg-gradient-subtle">
+  return <section className="py-32 bg-gradient-subtle">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-foreground">
-            Quem é Everton Teles, o mentor por trás do Clube da Oratória
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-foreground">Quem está por trás do Clube da Oratória</h2>
           
           <Card className="shadow-card-brand border-2 border-primary/20">
             <CardContent className="p-8">
               <div className="flex flex-col md:flex-row items-start gap-8">
                 <div className="flex-shrink-0 md:w-1/3">
-                  <img 
-                    src="/lovable-uploads/674be516-37e4-4ca1-bee1-6a80546e3ed0.png" 
-                    alt="Everton Teles" 
-                    className="w-full h-auto rounded-lg object-cover border-4 border-primary"
-                  />
+                  <img src="/lovable-uploads/674be516-37e4-4ca1-bee1-6a80546e3ed0.png" alt="Everton Teles" className="w-full h-auto rounded-lg object-cover border-4 border-primary" />
                 </div>
                 <div className="md:w-2/3">
                   <h3 className="text-3xl font-bold mb-6">Everton Teles</h3>
@@ -40,6 +32,5 @@ export const VVVCreator = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
