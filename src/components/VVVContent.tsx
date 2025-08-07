@@ -67,7 +67,7 @@ export const VVVContent = () => {
           
           <div className="text-center mt-12">
             <Button variant="cta" size="xl" onClick={() => setIsDialogOpen(true)}>
-              Quero me comunicar com confiança
+              Quero me comunicar com assertividade
               <ArrowRight className="ml-2" />
             </Button>
           </div>
