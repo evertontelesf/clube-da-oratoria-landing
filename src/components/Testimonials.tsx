@@ -1,7 +1,12 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, Quote, Play } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Star, Quote, Play, ArrowRight } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { LeadCaptureDialog } from "./LeadCaptureDialog";
 export const Testimonials = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
   const testimonials = [{
     name: "Carlos Silva",
     role: "Gerente de Vendas",
@@ -49,11 +54,18 @@ export const Testimonials = () => {
               <CarouselContent className="-ml-1">
                 {imageTestimonials.map((image, index) => <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
                     <div className="p-1">
-                      <Card className="shadow-card-brand border-2 border-primary/10 overflow-hidden bg-card">
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Card className="shadow-card-brand border-2 border-primary/10 overflow-hidden bg-card cursor-pointer hover:scale-105 transition-transform">
                         <CardContent className="p-0">
                           <img src={image} alt={`Depoimento ${index + 1}`} className="w-full h-[300px] object-cover" />
                         </CardContent>
                       </Card>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-4xl w-full h-[80vh]">
+                      <img src={image} alt={`Depoimento ${index + 1}`} className="w-full h-full object-contain" />
+                    </DialogContent>
+                  </Dialog>
                     </div>
                   </CarouselItem>)}
               </CarouselContent>
@@ -84,7 +96,27 @@ export const Testimonials = () => {
               <CarouselNext className="text-primary border-primary hover:bg-primary hover:text-primary-foreground" />
             </Carousel>
           </div>
+          
+          {/* CTA após provas sociais */}
+          <div className="text-center mt-16">
+            <h3 className="text-3xl font-bold mb-4 text-primary">
+              Viu quantas pessoas já se transformaram?
+            </h3>
+            <p className="text-lg mb-8 text-gray-950">
+              Agora é a sua vez de conquistar a comunicação que você sempre sonhou
+            </p>
+            <Button 
+              variant="cta" 
+              size="xl"
+              onClick={() => setIsDialogOpen(true)}
+            >
+              Quero me comunicar com assertividade
+              <ArrowRight className="ml-2" />
+            </Button>
+          </div>
         </div>
       </div>
+      
+      <LeadCaptureDialog open={isDialogOpen} onOpenChange={setIsDialogOpen} />
     </section>;
 };

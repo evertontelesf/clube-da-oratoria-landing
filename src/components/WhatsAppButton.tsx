@@ -11,7 +11,7 @@ export const WhatsAppButton = () => {
       <Button
         variant="whatsapp"
         size="lg"
-        className="rounded-full shadow-2xl animate-pulse-cta"
+        className="rounded-full shadow-2xl"
         onClick={() => window.open(whatsappUrl, '_blank')}
       >
         <MessageCircle size={24} />
