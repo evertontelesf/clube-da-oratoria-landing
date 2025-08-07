@@ -24,7 +24,7 @@ export const VVVObjections = () => {
     objection: "Já tentei outros cursos",
     response: "Nossa metodologia única com os 3 pilares é diferente de tudo que existe."
   }];
-  return <section className="py-32 bg-background">
+  return <section className="py-32 bg-gradient-subtle ">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-orange-500">

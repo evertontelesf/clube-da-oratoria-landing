@@ -26,7 +26,7 @@ export const Testimonials = () => {
   return <section className="py-32 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-orange-500">
+          <h2 className="text-4xl font-bold text-center mb-4 text-orange-500 md:text-5xl">
             Provas Sociais
           </h2>
           <p className="text-xl text-center mb-12 text-gray-950">
@@ -41,7 +41,7 @@ export const Testimonials = () => {
 
           {/* Image Testimonials Carousel */}
           <div className="mb-16">
-            <h3 className="text-2xl font-bold text-center mb-8 text-primary">Prints:</h3>
+            <h3 className="font-bold text-center mb-8 text-primary text-4xl">Prints:</h3>
             <Carousel opts={{
             align: "start",
             loop: true
@@ -64,7 +64,7 @@ export const Testimonials = () => {
 
           {/* Video Testimonials Carousel */}
           <div>
-            <h3 className="text-2xl font-bold text-center mb-8 text-primary">Gravações:</h3>
+            <h3 className="font-bold text-center mb-8 text-primary text-4xl">Gravações:</h3>
             <Carousel opts={{
             align: "start",
             loop: true
