@@ -39,12 +39,12 @@ export const LeadCaptureDialog = ({ open, onOpenChange }: LeadCaptureDialogProps
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[425px] mx-4 w-[calc(100vw-2rem)]">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-center">
+          <DialogTitle className="text-xl md:text-2xl font-bold text-center">
             Última Etapa para Garantir sua Vaga
           </DialogTitle>
-          <DialogDescription className="text-center">
+          <DialogDescription className="text-center text-sm md:text-base">
             Preencha seus dados para ter acesso ao checkout exclusivo
           </DialogDescription>
         </DialogHeader>
@@ -84,7 +84,7 @@ export const LeadCaptureDialog = ({ open, onOpenChange }: LeadCaptureDialogProps
             />
           </div>
           
-          <Button type="submit" variant="cta-pulse" size="xl" className="w-full">
+          <Button type="submit" variant="cta-pulse" size="xl" className="w-full text-sm md:text-lg">
             Acessar Checkout Exclusivo
             <ArrowRight className="ml-2" />
           </Button>
