@@ -23,8 +23,8 @@ const Index = () => {
       <VVVCreator />
       <Testimonials />
       <VVVOffer />
-      <FAQ />
       <VVVObjections />
+      <FAQ />
       <VVVFinalCTA />
       <Footer />
       <WhatsAppButton />
