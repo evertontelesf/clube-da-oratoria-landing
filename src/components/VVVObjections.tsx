@@ -27,8 +27,8 @@ export const VVVObjections = () => {
   return <section className="py-32 bg-gradient-subtle ">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-orange-500">
-            Objeções <span className="text-primary">Comuns</span>
+          <h2 className="text-4xl font-bold text-center mb-4 text-zinc-950 md:text-5xl">
+            Objeções <span className="text-zinc-950 text-5xl">Comuns</span>
           </h2>
           <p className="text-xl text-center mb-12 text-gray-950">
             Respondendo suas principais dúvidas

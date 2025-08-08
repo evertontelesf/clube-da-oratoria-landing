@@ -22,11 +22,11 @@ export const FAQ = () => {
     question: "Tem suporte se eu tiver dúvidas?",
     answer: "Sim! Oferecemos suporte exclusivo via WhatsApp para esclarecer dúvidas sobre o conteúdo e te ajudar na sua jornada de desenvolvimento."
   }];
-  return <section className="py-32 bg-background">
+  return <section className="py-32 bg-gradient-subtle bg-slate-50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-4 text-gray-950 md:text-5xl">
-            Perguntas <span className="text-gray-950 text-5xl">Frequentes</span>
+          <h2 className="text-4xl font-bold text-center mb-4 text-orange-500 md:text-5xl">
+            Perguntas <span className="text-5xl text-orange-500">Frequentes</span>
           </h2>
           <p className="text-xl mb-12 text-gray-950 text-center">
             Esclarecemos as principais dúvidas sobre o curso
