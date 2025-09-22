@@ -22,10 +22,8 @@ const Index = () => {
       <VVVContent />
       <VVVCreator />
       <Testimonials />
-      <VVVOffer />
       <VVVObjections />
       <FAQ />
-      <VVVFinalCTA />
       <Footer />
       <WhatsAppButton />
     </div>

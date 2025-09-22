@@ -10,31 +10,42 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ArrowRight } from "lucide-react";
-
+import { salvar } from "@/services/leadService";
 interface LeadCaptureDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }
 
-export const LeadCaptureDialog = ({ open, onOpenChange }: LeadCaptureDialogProps) => {
+export const LeadCaptureDialog = ({
+  open,
+  onOpenChange,
+}: LeadCaptureDialogProps) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    whatsapp: ""
+    whatsapp: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Save lead data to Supabase
-    console.log("Lead data:", formData);
-    
+
+    salvar(formData.name, formData.email, formData.whatsapp);
     // Redirect to checkout after capturing lead
-    window.open("https://checkout-url.com", "_blank");
+    if ((window as any).fbq) {
+      // Evento padrão (recomendado pelo Meta)
+      (window as any).fbq("track", "Lead", {
+        content_name: "Dialog Pre-Checkout",
+      });
+    }
+    window.open(
+      "https://pay.hub.la/QfP7RDivS3zNjbRWqtx6?_path=/checkout/QfP7RDivS3zNjbRWqtx6 ",
+      "_blank"
+    );
     onOpenChange(false);
   };
 
   const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
   return (
@@ -48,7 +59,7 @@ export const LeadCaptureDialog = ({ open, onOpenChange }: LeadCaptureDialogProps
             Preencha seus dados para ter acesso ao checkout exclusivo
           </DialogDescription>
         </DialogHeader>
-        
+
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="name">Nome Completo</Label>
@@ -60,7 +71,7 @@ export const LeadCaptureDialog = ({ open, onOpenChange }: LeadCaptureDialogProps
               required
             />
           </div>
-          
+
           <div className="space-y-2">
             <Label htmlFor="email">E-mail</Label>
             <Input
@@ -72,7 +83,7 @@ export const LeadCaptureDialog = ({ open, onOpenChange }: LeadCaptureDialogProps
               required
             />
           </div>
-          
+
           <div className="space-y-2">
             <Label htmlFor="whatsapp">WhatsApp</Label>
             <Input
@@ -83,8 +94,12 @@ export const LeadCaptureDialog = ({ open, onOpenChange }: LeadCaptureDialogProps
               required
             />
           </div>
-          
-          <Button type="submit" variant="cta-pulse" size="xl" className="w-full text-sm md:text-lg">
+
+          <Button
+            type="submit"
+            variant="cta-pulse"
+            size="xl"
+            className="w-full text-sm md:text-lg">
             Acessar Checkout Exclusivo
             <ArrowRight className="ml-2" />
           </Button>
