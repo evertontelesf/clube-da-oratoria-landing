@@ -62,7 +62,12 @@ export const VVVHero = () => {
               variant="cta"
               size="xl"
               className="w-full md:w-auto text-sm md:text-lg"
-              onClick={() => setIsDialogOpen(true)}>
+              onClick={() => {
+                window.open(
+                  "https://pay.hub.la/QfP7RDivS3zNjbRWqtx6?_path=/checkout/QfP7RDivS3zNjbRWqtx6 ",
+                  "_blank"
+                );
+              }}>
               Quero me comunicar com excelência
             </Button>
           </div>

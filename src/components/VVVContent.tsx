@@ -95,7 +95,12 @@ export const VVVContent = () => {
             <Button
               variant="cta"
               size="xl"
-              onClick={() => setIsDialogOpen(true)}>
+              onClick={() => {
+                window.open(
+                  "https://pay.hub.la/QfP7RDivS3zNjbRWqtx6?_path=/checkout/QfP7RDivS3zNjbRWqtx6 ",
+                  "_blank"
+                );
+              }}>
               Quero me comunicar com assertividade
               <ArrowRight className="ml-2" />
             </Button>
