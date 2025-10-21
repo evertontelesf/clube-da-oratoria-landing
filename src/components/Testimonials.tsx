@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -59,24 +61,25 @@ export const Testimonials = () => {
     "https://www.youtube.com/embed/3FYMfHsjb6I",
   ];
   return (
-    <section className="py-10 lg:py-32 bg-background">
+    <section className="py-16 lg:py-32 bg-gradient-to-b from-white to-orange-50">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-4 text-orange-500 md:text-5xl">
-            Depoimentos
-          </h2>
-          <p className="text-xl text-center mb-12 text-gray-950">
-            O que dizem os alunos
-          </p>
-
-          {/* Written Testimonials */}
-          <div className="mb-16"></div>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+              Veja o que dizem nossos <span className="text-primary">alunos</span>
+            </h2>
+            <p className="text-xl text-gray-600">
+              Centenas de pessoas já transformaram sua comunicação
+            </p>
+          </div>
 
           {/* Image Testimonials Carousel */}
-          <div className="mb-16">
-            <h3 className="font-bold text-center mb-8 text-primary text-4xl">
-              Mensagens
-            </h3>
+          <div className="mb-20">
+            <div className="flex items-center justify-center gap-3 mb-10">
+              <div className="h-px bg-gradient-to-r from-transparent via-primary to-transparent flex-1"></div>
+              <h3 className="text-2xl font-bold text-primary">💬 Mensagens dos Alunos</h3>
+              <div className="h-px bg-gradient-to-r from-primary via-primary to-transparent flex-1"></div>
+            </div>
             <Carousel
               opts={{
                 align: "start",
@@ -91,13 +94,14 @@ export const Testimonials = () => {
                     <div className="p-1">
                       <Dialog>
                         <DialogTrigger asChild>
-                          <Card className="shadow-card-brand border-2 border-primary/10 overflow-hidden bg-card cursor-pointer hover:scale-105 transition-transform">
-                            <CardContent className="p-0">
+                          <Card className="group shadow-lg border-2 border-primary/20 overflow-hidden bg-white cursor-pointer hover:shadow-2xl hover:border-primary/40 transition-all duration-300">
+                            <CardContent className="p-0 relative">
                               <img
                                 src={image}
                                 alt={`Depoimento ${index + 1}`}
-                                className="w-full h-[300px] object-contain"
+                                className="w-full h-[320px] object-contain group-hover:scale-105 transition-transform duration-300"
                               />
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                             </CardContent>
                           </Card>
                         </DialogTrigger>
@@ -119,10 +123,12 @@ export const Testimonials = () => {
           </div>
 
           {/* Video Testimonials Carousel */}
-          <div>
-            <h3 className="font-bold text-center mb-8 text-primary text-4xl">
-              Vídeos
-            </h3>
+          <div className="mb-20">
+            <div className="flex items-center justify-center gap-3 mb-10">
+              <div className="h-px bg-gradient-to-r from-transparent via-primary to-transparent flex-1"></div>
+              <h3 className="text-2xl font-bold text-primary">🎥 Depoimentos em Vídeo</h3>
+              <div className="h-px bg-gradient-to-r from-primary via-primary to-transparent flex-1"></div>
+            </div>
             <Carousel
               opts={{
                 align: "start",
@@ -135,18 +141,20 @@ export const Testimonials = () => {
                     key={index}
                     className="pl-1 md:basis-1/2 lg:basis-1/3">
                     <div className="p-1">
-                      <Card className="shadow-card-brand border-2 border-primary/10 overflow-hidden bg-card">
+                      <Card className="shadow-lg border-2 border-primary/20 overflow-hidden bg-white hover:shadow-2xl hover:border-primary/40 transition-all duration-300">
                         <CardContent className="p-0">
-                          <iframe
-                            width="100%"
-                            height="300"
-                            src={video}
-                            title={`Depoimento YouTube ${index + 1}`}
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                            className="w-full h-[300px]"
-                          />
+                          <div className="relative aspect-video">
+                            <iframe
+                              width="100%"
+                              height="100%"
+                              src={video}
+                              title={`Depoimento YouTube ${index + 1}`}
+                              frameBorder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                              className="absolute inset-0 w-full h-full"
+                            />
+                          </div>
                         </CardContent>
                       </Card>
                     </div>
@@ -159,13 +167,12 @@ export const Testimonials = () => {
           </div>
 
           {/* CTA após provas sociais */}
-          <div className="text-center mt-16">
-            <h3 className="text-3xl font-bold mb-4 text-primary">
+          <div className="text-center bg-white rounded-2xl p-12 shadow-2xl border-2 border-primary/20">
+            <h3 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
               Viu quantas pessoas já se transformaram?
             </h3>
-            <p className="text-lg mb-8 text-gray-950">
-              Agora é a sua vez de conquistar a comunicação que você sempre
-              sonhou
+            <p className="text-xl mb-8 text-gray-700">
+              Agora é a sua vez de conquistar a comunicação que você sempre sonhou
             </p>
             <Button
               variant="cta"

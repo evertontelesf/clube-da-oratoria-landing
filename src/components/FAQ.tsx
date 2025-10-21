@@ -1,8 +1,10 @@
+"use client";
+
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChevronDown, ChevronRight } from "lucide-react";
 export const FAQ = () => {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
   const faqs = [
     {
       question: "É para quem nunca falou em público?",
@@ -36,38 +38,52 @@ export const FAQ = () => {
     },
   ];
   return (
-    <section className="py-10 lg:py-32 bg-gradient-subtle bg-slate-50">
+    <section className="py-16 lg:py-32 bg-gradient-to-b from-orange-50 to-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-4 text-orange-500 md:text-5xl">
-            Perguntas Frequentes
-          </h2>
-          <p className="text-xl mb-12 text-gray-950 text-center">
-            Esclarecemos as principais dúvidas sobre o curso
-          </p>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+              Perguntas <span className="text-primary">Frequentes</span>
+            </h2>
+            <p className="text-xl text-gray-600">
+              Tire suas dúvidas sobre o curso
+            </p>
+          </div>
 
-          <div className="space-y-4">
+          <div className="space-y-3">
             {faqs.map((faq, index) => (
               <Card
                 key={index}
-                className="shadow-card-brand border-2 border-primary/10 overflow-hidden">
+                className={`shadow-lg border-2 overflow-hidden transition-all duration-300 ${
+                  openFaq === index
+                    ? "border-primary bg-orange-50"
+                    : "border-gray-200 bg-white hover:border-primary/50"
+                }`}>
                 <CardContent className="p-0">
                   <button
                     onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                    className="w-full p-6 text-left hover:bg-muted/50 transition-colors flex items-center justify-between">
-                    <h3 className="text-lg font-semibold">{faq.question}</h3>
-                    {openFaq === index ? (
-                      <ChevronDown className="text-primary" size={24} />
-                    ) : (
-                      <ChevronRight className="text-primary" size={24} />
-                    )}
+                    className="w-full p-6 text-left flex items-center justify-between gap-4 group">
+                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-primary transition-colors">
+                      {faq.question}
+                    </h3>
+                    <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all ${
+                      openFaq === index ? "bg-primary" : "bg-gray-200 group-hover:bg-primary/20"
+                    }`}>
+                      {openFaq === index ? (
+                        <ChevronDown className="text-white" size={20} />
+                      ) : (
+                        <ChevronRight className="text-gray-600 group-hover:text-primary" size={20} />
+                      )}
+                    </div>
                   </button>
 
                   {openFaq === index && (
-                    <div className="px-6 pb-6 border-t border-border">
-                      <p className="text-muted-foreground leading-relaxed mt-4">
-                        {faq.answer}
-                      </p>
+                    <div className="px-6 pb-6 animate-in slide-in-from-top-2 duration-300">
+                      <div className="pt-4 border-t border-primary/20">
+                        <p className="text-gray-700 leading-relaxed text-base">
+                          {faq.answer}
+                        </p>
+                      </div>
                     </div>
                   )}
                 </CardContent>

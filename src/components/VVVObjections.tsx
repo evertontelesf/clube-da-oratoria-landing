@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, X, ArrowRight } from "lucide-react";
@@ -36,42 +38,52 @@ export const VVVObjections = () => {
     },
   ];
   return (
-    <section className="py-10 lg:py-32 bg-gradient-subtle ">
+    <section className="py-16 lg:py-32 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-4 text-zinc-950 md:text-5xl">
-            Objeções Comuns
-          </h2>
-          <p className="text-xl text-center mb-12 text-gray-950">
-            Respondendo suas principais dúvidas
-          </p>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+              Talvez você esteja pensando...
+            </h2>
+            <p className="text-xl text-gray-600">
+              Veja como o Clube da Oratória resolve suas <span className="text-primary font-semibold">principais dúvidas</span>
+            </p>
+          </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             {objections.map((item, index) => (
               <Card
                 key={index}
-                className="shadow-card-brand border-2 border-primary/10">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4 mb-4">
-                    <X className="text-red-500 mt-1 flex-shrink-0" size={24} />
-                    <p className="text-lg font-medium text-foreground">
-                      "{item.objection}"
-                    </p>
+                className="group shadow-lg border-2 border-gray-200 hover:border-primary/50 hover:shadow-xl transition-all duration-300">
+                <CardContent className="p-8">
+                  <div className="mb-6">
+                    <div className="flex items-start gap-3 mb-2">
+                      <div className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
+                        <X className="text-red-600" size={18} />
+                      </div>
+                      <p className="text-lg font-bold text-gray-900 leading-tight">
+                        "{item.objection}"
+                      </p>
+                    </div>
                   </div>
 
-                  <div className="flex items-start gap-4">
-                    <CheckCircle
-                      className="text-primary mt-1 flex-shrink-0"
-                      size={24}
-                    />
-                    <p className="text-muted-foreground">{item.response}</p>
+                  <div className="bg-orange-50 rounded-lg p-4 border-l-4 border-primary">
+                    <div className="flex items-start gap-3">
+                      <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <CheckCircle className="text-white" size={16} />
+                      </div>
+                      <p className="text-gray-800 font-medium leading-relaxed">{item.response}</p>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-16 bg-white rounded-2xl p-12 shadow-2xl border-2 border-primary/20">
+            <p className="text-2xl font-bold text-primary mb-6">
+              Ainda tem dúvidas? Vamos resolver isso juntos!
+            </p>
             <Button
               variant="cta"
               size="xl"

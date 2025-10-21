@@ -1,5 +1,5 @@
 import { Facebook, Instagram, Youtube, Mail } from "lucide-react";
-import logo from "@/assets/logo.png";
+
 
 export const Footer = () => {
   return (
@@ -9,10 +9,8 @@ export const Footer = () => {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div className="md:col-span-2">
               <div className="flex items-center gap-3 mb-4">
-                <img src={logo} alt="Clube da Oratória" className="h-4 w-12" />
-                <h3 className="text-xl font-bold text-white">
-                  Clube da Oratória
-                </h3>
+                <img src={"/logo.png"} alt="Clube da Oratória" className="h-auto w-48" />
+               
               </div>
               <p className="text-gray-300 mb-4">
                 Transformando vidas através da comunicação autêntica e
