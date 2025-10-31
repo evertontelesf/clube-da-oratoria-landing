@@ -8,7 +8,7 @@ import { QueryProvider } from "@/components/providers/query-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://clubedaoratoria.com.br';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://clubedaoratoria.net.br/';
 const siteName = 'Clube da Oratória';
 const siteDescription = 'Descubra como desenvolver uma comunicação autêntica, confiante e irresistível. Curso completo que te ajuda a destravar a fala, vencer o medo de se expressar e comunicar com autoridade.';
 const siteTitle = 'Clube da Oratória - Transforme sua Comunicação';
