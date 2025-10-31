@@ -96,12 +96,12 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Clube da Oratória - Transforme sua Comunicação" />
         <meta property="og:description" content="Descubra como desenvolver uma comunicação autêntica, confiante e irresistível. Curso completo que te ajuda a destravar a fala, vencer o medo de se expressar e comunicar com autoridade." />
-        <meta property="og:image" content="/og-image.png" />
+        <meta property="og:image" content="https://clube-da-oratoria.net.br/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://clube-da-oratoria.net.br/" />
         <meta name="twitter:title" content="Clube da Oratória - Transforme sua Comunicação" />
         <meta name="twitter:description" content="Descubra como desenvolver uma comunicação autêntica, confiante e irresistível. Curso completo que te ajuda a destravar a fala, vencer o medo de se expressar e comunicar com autoridade." />
-        <meta name="twitter:image" content="/og-image.png" />
+        <meta name="twitter:image" content="https://clube-da-oratoria.net.br/og-image.png" />
       </head>
       <body className={inter.className}>
         <QueryProvider>
