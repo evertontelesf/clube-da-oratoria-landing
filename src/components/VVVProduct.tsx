@@ -17,7 +17,7 @@ export const VVVProduct = () => {
               O que é o <span className="text-primary">Clube da Oratória</span>?
             </h2>
           </div>
-          <div className="relative w-full h-[300px] md:h-[550px] mb-16 overflow-hidden">
+          <div className="relative w-full h-[300px] md:h-[550px] mb-16">
             <Image
               src="/lovable-uploads/macbook-everton.webp"
               alt=""

@@ -15,6 +15,12 @@ export const VVVHero = () => {
               alt="Clube da Oratória"
               className="h-[6rem] w-[16rem] md:h-[6rem] md:w-[16rem] mx-auto mb-4 md:mb-6"
             />
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold mb-4 md:mb-6 leading-tight px-2">
+              Aula: Descubra como desenvolver uma comunicação{" "}
+              <span className="text-primary">
+                autêntica, confiante e irresistível
+              </span>
+            </h1>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 md:p-6 mb-6 md:mb-8 mx-2">
             <p className="text-base md:text-lg italic text-gray-200">
               Comunicar-se bem não é um dom. É uma habilidade treinável,
@@ -22,12 +28,7 @@ export const VVVHero = () => {
               entre você e as oportunidades que deseja.
             </p>
           </div>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold mb-4 md:mb-6 leading-tight px-2">
-              Aula: Descubra como desenvolver uma comunicação{" "}
-              <span className="text-primary">
-                autêntica, confiante e irresistível
-              </span>
-            </h1>
+          
             <div className="bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl p-1 mb-8">
               <div className="bg-black rounded-xl overflow-hidden shadow-2xl">
                 <div className="aspect-video relative">

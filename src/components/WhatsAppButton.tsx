@@ -15,7 +15,7 @@ export const WhatsAppButton = () => {
         onClick={() => window.open(whatsappUrl, '_blank')}
       >
         <BsWhatsapp size={28} className=" flex-shrink-0"/>
-        <span className="hidden sm:inline">Fale comigo no WhatsApp</span>
+       
       </button>
     </div>
   );
