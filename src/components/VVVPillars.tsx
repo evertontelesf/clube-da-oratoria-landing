@@ -18,7 +18,7 @@ export const VVVPillars = () => {
     title: "3. Atração",
     description: "Comunique de forma magnética: linguagem não verbal, storytelling, empatia e conexão com o público. Seja lembrado."
   }];
-  return <section className="py-16 md:py-32 bg-gradient-subtle">
+  return <section className="py-16 md:py-10 bg-gradient-subtle">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-gray-950 px-2">

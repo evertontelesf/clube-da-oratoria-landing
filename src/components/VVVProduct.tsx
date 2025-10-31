@@ -3,18 +3,35 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 import { LeadCaptureDialog } from "./LeadCaptureDialog";
 export const VVVProduct = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   return (
-    <section className="py-16 lg:py-32 bg-white">
+    <section className="py-16 lg:py-10 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
               O que é o <span className="text-primary">Clube da Oratória</span>?
             </h2>
+          </div>
+          <div className="relative w-full h-[300px] md:h-[550px] mb-16 overflow-hidden">
+            <Image
+              src="/lovable-uploads/macbook-everton.webp"
+              alt=""
+              fill
+              className="mx-auto object-contain z-10"
+            />
+             <Image
+              src="/lovable-uploads/iphone.png"
+              alt=""
+              width={0}
+              height={0}
+              sizes="100%"
+              className="md:block md:w-96 max-md:w-40  z-[11] max-md:bottom-0 max-md:-left-2 h-auto absolute -bottom-12 -left-10 object-contain rotate-12"
+            />
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">

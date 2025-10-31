@@ -38,7 +38,7 @@ export const FAQ = () => {
     },
   ];
   return (
-    <section className="py-16 lg:py-32 bg-gradient-to-b from-orange-50 to-white">
+    <section className="py-16 lg:py-10 bg-gradient-to-b from-orange-50 to-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">

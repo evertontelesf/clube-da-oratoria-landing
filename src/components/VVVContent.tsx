@@ -54,7 +54,7 @@ export const VVVContent = () => {
     },
   ];
   return (
-    <section className="py-10 lg:py-32 bg-background">
+    <section className="py-10 lg:py-10 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-4 text-orange-500 md:text-5xl">
@@ -114,7 +114,8 @@ export const VVVContent = () => {
           <div className="text-center mt-12">
             <Button
               variant="cta"
-              size="xl"
+              className="w-full md:w-auto"
+              size="lg"
               onClick={() => {
                 window.open(
                   "https://pay.hub.la/QfP7RDivS3zNjbRWqtx6?_path=/checkout/QfP7RDivS3zNjbRWqtx6 ",

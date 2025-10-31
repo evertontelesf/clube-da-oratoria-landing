@@ -16,7 +16,7 @@ export const VVVTargetAudience = () => {
     "Pra quem quer liderar com respeito e autoridade, seja em casa ou no trabalho",
   ];
   return (
-    <section className="py-16 md:py-32 bg-background">
+    <section className="py-16 md:py-10 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 md:mb-12 text-orange-500 px-2">

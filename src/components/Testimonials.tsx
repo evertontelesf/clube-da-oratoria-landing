@@ -61,7 +61,7 @@ export const Testimonials = () => {
     "https://www.youtube.com/embed/3FYMfHsjb6I",
   ];
   return (
-    <section className="py-16 lg:py-32 bg-gradient-to-b from-white to-orange-50">
+    <section className="py-16 lg:py-10 bg-gradient-to-b from-white to-orange-50">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -167,7 +167,7 @@ export const Testimonials = () => {
           </div>
 
           {/* CTA após provas sociais */}
-          <div className="text-center bg-white rounded-2xl p-12 shadow-2xl border-2 border-primary/20">
+          <div className="text-center bg-white rounded-2xl p-4 md:p-12 shadow-2xl border-2 border-primary/20">
             <h3 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
               Viu quantas pessoas já se transformaram?
             </h3>
@@ -176,7 +176,8 @@ export const Testimonials = () => {
             </p>
             <Button
               variant="cta"
-              size="xl"
+              className="w-full md:w-auto"
+              size="lg"
               onClick={() => {
                 window.open(
                   "https://pay.hub.la/QfP7RDivS3zNjbRWqtx6?_path=/checkout/QfP7RDivS3zNjbRWqtx6 ",

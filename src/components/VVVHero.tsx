@@ -6,7 +6,7 @@ import { LeadCaptureDialog } from "./LeadCaptureDialog";
 export const VVVHero = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   return (
-    <section className="py-16 md:py-32 bg-gradient-hero text-white">
+    <section className="py-12 bg-gradient-hero text-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-6 md:mb-8">
@@ -22,6 +22,12 @@ export const VVVHero = () => {
               entre você e as oportunidades que deseja.
             </p>
           </div>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold mb-4 md:mb-6 leading-tight px-2">
+              Aula: Descubra como desenvolver uma comunicação{" "}
+              <span className="text-primary">
+                autêntica, confiante e irresistível
+              </span>
+            </h1>
             <div className="bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl p-1 mb-8">
               <div className="bg-black rounded-xl overflow-hidden shadow-2xl">
                 <div className="aspect-video relative">
@@ -39,12 +45,7 @@ export const VVVHero = () => {
               </div>
             </div>
 
-            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight px-2">
-              Aula: Descubra como desenvolver uma comunicação{" "}
-              <span className="text-primary">
-                autêntica, confiante e irresistível
-              </span>
-            </h1>
+            
 
             <h2 className="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 text-gray-300 leading-relaxed px-2">
               — mesmo que você sinta vergonha, insegurança ou não saiba por onde

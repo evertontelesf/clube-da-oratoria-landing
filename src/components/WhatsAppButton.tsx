@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Phone } from "lucide-react";
+import { BsWhatsapp } from "react-icons/bs";
 
 export const WhatsAppButton = () => {
   const whatsappNumber = "5531993800887";
@@ -10,15 +10,13 @@ export const WhatsAppButton = () => {
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
-      <Button
-        variant="whatsapp"
-        size="lg"
-        className="rounded-full shadow-2xl"
+      <button
+        className="rounded-full flex items-center justify-center bg-green-500 text-white w-14 h-14 shadow-2xl"
         onClick={() => window.open(whatsappUrl, '_blank')}
       >
-        <MessageCircle size={24} />
+        <BsWhatsapp size={28} className=" flex-shrink-0"/>
         <span className="hidden sm:inline">Fale comigo no WhatsApp</span>
-      </Button>
+      </button>
     </div>
   );
 };
