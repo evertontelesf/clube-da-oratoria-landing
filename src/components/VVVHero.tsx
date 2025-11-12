@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { LeadCaptureDialog } from "./LeadCaptureDialog";
+import { LazyYouTube } from "./LazyYouTube";
 export const VVVHero = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   return (
@@ -10,9 +12,12 @@ export const VVVHero = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-6 md:mb-8">
-            <img
+            <Image
               src="/logo.png"
               alt="Clube da Oratória"
+              width={256}
+              height={96}
+              priority
               className="h-[6rem] w-[16rem] md:h-[6rem] md:w-[16rem] mx-auto mb-4 md:mb-6"
             />
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold mb-4 md:mb-6 leading-tight px-2">
@@ -29,22 +34,7 @@ export const VVVHero = () => {
             </p>
           </div>
           
-            <div className="bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl p-1 mb-8">
-              <div className="bg-black rounded-xl overflow-hidden shadow-2xl">
-                <div className="aspect-video relative">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://www.youtube.com/embed/fDCMw3ySHdA?si=TF-bOKNZI23Wlc2C"
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                    className="absolute inset-0 w-full h-full"></iframe>
-                </div>
-              </div>
-            </div>
+            <LazyYouTube videoId="fDCMw3ySHdA" title="Clube da Oratória - Aula Gratuita" />
 
             
 

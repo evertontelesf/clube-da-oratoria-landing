@@ -1,5 +1,5 @@
 import { Facebook, Instagram, Youtube, Mail } from "lucide-react";
-
+import Image from "next/image";
 
 export const Footer = () => {
   return (
@@ -9,7 +9,14 @@ export const Footer = () => {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div className="md:col-span-2">
               <div className="flex items-center gap-3 mb-4">
-                <img src={"/logo.png"} alt="Clube da Oratória" className="h-auto w-48" />
+                <Image
+                  src="/logo.png"
+                  alt="Clube da Oratória"
+                  width={192}
+                  height={72}
+                  loading="lazy"
+                  className="h-auto w-48"
+                />
                
               </div>
               <p className="text-gray-300 mb-4">

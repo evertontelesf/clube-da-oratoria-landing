@@ -1,6 +1,7 @@
 "use client";
 
 import { Quote } from "lucide-react";
+import Image from "next/image";
 
 export const VVVCreator = () => {
   return (
@@ -43,10 +44,13 @@ export const VVVCreator = () => {
             <div className="order-1 md:order-2">
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-primary opacity-20 blur-3xl rounded-full"></div>
-                <img 
-                  src="/lovable-uploads/674be516-37e4-4ca1-bee1-6a80546e3ed0.png" 
-                  alt="Everton Teles" 
-                  className="relative w-full h-auto rounded-2xl shadow-2xl" 
+                <Image
+                  src="/lovable-uploads/674be516-37e4-4ca1-bee1-6a80546e3ed0.png"
+                  alt="Everton Teles"
+                  width={600}
+                  height={800}
+                  loading="lazy"
+                  className="relative w-full h-auto rounded-2xl shadow-2xl"
                 />
               </div>
             </div>
