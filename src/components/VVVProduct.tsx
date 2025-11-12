@@ -60,8 +60,8 @@ export const VVVProduct = () => {
                 <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-3xl font-bold text-white">∞</span>
                 </div>
-                <h3 className="font-bold text-lg mb-2 text-gray-900">Acesso Vitalicio</h3>
-                <p className="text-gray-600">Estude no seu ritmo, quando quiser</p>
+                <h3 className="font-bold text-lg mb-2 text-gray-900">Acesso Por 1 Ano</h3>
+                <p className="text-gray-600">Acesso garantido por 1 ano inteiro</p>
               </CardContent>
             </Card>
           </div>
