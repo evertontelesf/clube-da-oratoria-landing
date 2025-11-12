@@ -89,7 +89,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className="bg-[#0d0d0d]">
       <body className={inter.className}>
         {/* Meta Pixel Code */}
         <Script
