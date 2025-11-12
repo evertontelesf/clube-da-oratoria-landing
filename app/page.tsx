@@ -1,3 +1,5 @@
+"use client";
+
 import dynamic from "next/dynamic";
 import { VVVHero } from "@/components/VVVHero";
 import { VVVProduct } from "@/components/VVVProduct";
@@ -16,7 +18,7 @@ const WhatsAppButton = dynamic(() => import("@/components/WhatsAppButton").then(
 export default function Home() {
   return (
     <div className="min-h-screen">
-      {/* Componentes críticos para FCP - carregam imediatamente com SSR */}
+      {/* Componentes críticos para FCP - carregam imediatamente */}
       <VVVHero />
       <VVVProduct />
       
