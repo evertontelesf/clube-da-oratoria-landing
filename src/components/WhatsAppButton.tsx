@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { BsWhatsapp } from "react-icons/bs";
 
 export const WhatsAppButton = () => {
-  const whatsappNumber = "553172626160";
+  const whatsappNumber = "5531993800887";
   const message = "Olá! Tenho interesse no Clube da Oratória e gostaria de saber mais informações.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
