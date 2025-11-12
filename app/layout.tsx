@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -89,21 +90,35 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <head>
-        <title>Clube da Oratória - Transforme sua Comunicação</title>
-        <meta name="description" content="Descubra como desenvolver uma comunicação autêntica, confiante e irresistível. Curso completo que te ajuda a destravar a fala, vencer o medo de se expressar e comunicar com autoridade." />
-        <meta property="og:url" content="https://clube-da-oratoria.net.br/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Clube da Oratória - Transforme sua Comunicação" />
-        <meta property="og:description" content="Descubra como desenvolver uma comunicação autêntica, confiante e irresistível. Curso completo que te ajuda a destravar a fala, vencer o medo de se expressar e comunicar com autoridade." />
-        <meta property="og:image" content="https://clube-da-oratoria.net.br/og-image.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://clube-da-oratoria.net.br/" />
-        <meta name="twitter:title" content="Clube da Oratória - Transforme sua Comunicação" />
-        <meta name="twitter:description" content="Descubra como desenvolver uma comunicação autêntica, confiante e irresistível. Curso completo que te ajuda a destravar a fala, vencer o medo de se expressar e comunicar com autoridade." />
-        <meta name="twitter:image" content="https://clube-da-oratoria.net.br/og-image.png" />
-      </head>
       <body className={inter.className}>
+        {/* Meta Pixel Code */}
+        <Script
+          id="facebook-pixel"
+          strategy="afterInteractive"
+        >
+          {`
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '1815338769066819');
+            fbq('track', 'PageView');
+          `}
+        </Script>
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=1815338769066819&ev=PageView&noscript=1"
+          />
+        </noscript>
+        {/* End Meta Pixel Code */}
+        
         <QueryProvider>
           <TooltipProvider>
             {children}
