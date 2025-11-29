@@ -34,7 +34,7 @@ export const VVVHero = () => {
             </p>
           </div>
           
-            <LazyYouTube videoId="fDCMw3ySHdA" title="Clube da Oratória - Aula Gratuita" />
+            <LazyYouTube videoId="He4Azl0FqMg" title="Clube da Oratória - Aula Gratuita" />
 
             
 
