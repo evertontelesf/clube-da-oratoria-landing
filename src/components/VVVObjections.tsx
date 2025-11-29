@@ -80,23 +80,59 @@ export const VVVObjections = () => {
             ))}
           </div>
 
-          <div className="text-center mt-16 bg-white rounded-2xl p-4 md:p-16 shadow-2xl border-2 border-primary/20">
-            <p className="text-2xl font-bold text-primary mb-6">
-              Ainda tem dúvidas? Vamos resolver isso juntos!
-            </p>
-            <Button
-              variant="cta"
-              className="w-full md:w-auto"
-              size="lg"
-              onClick={() => {
-                window.open(
-                  "https://pay.hub.la/QfP7RDivS3zNjbRWqtx6?_path=/checkout/QfP7RDivS3zNjbRWqtx6 ",
-                  "_blank"
-                );
-              }}>
-              Quero me comunicar com confiança
-              <ArrowRight className="ml-2" />
-            </Button>
+          <div className="text-center pt-20`` py-10 relative">
+            {/* Decoração de fundo */}
+            <div className="absolute inset-0 bg-gradient-to-b from-orange-50/50 via-transparent to-transparent rounded-3xl"></div>
+            
+            <div className="relative z-10">
+              <span className="inline-block bg-primary/10 text-primary font-semibold px-4 py-2 rounded-full text-sm mb-6 uppercase tracking-wide">
+                Oferta Especial
+              </span>
+              
+              <h3 className="text-4xl md:text-5xl font-black text-gray-900 mb-8">
+                Clube da Oratória
+              </h3>
+              
+              <div className="relative inline-block mb-6">
+                <span className="text-2xl md:text-3xl text-gray-400 font-medium">
+                  De: R$ 697,00
+                </span>
+                <div className="absolute top-1/2 left-0 right-0 h-1 bg-red-500 -rotate-6 rounded-full"></div>
+              </div>
+              
+              <p className="text-lg text-gray-600 mb-3 font-medium">
+                Por apenas
+              </p>
+              
+              <div className="mb-4">
+                <span className="text-5xl md:text-7xl font-black text-primary">
+                  12x
+                </span>
+                <span className="text-5xl md:text-7xl font-black text-primary ml-2">
+                  R$ 25,10
+                </span>
+              </div>
+              
+              <p className="text-xl text-gray-600 mb-10">
+                ou <span className="font-bold text-gray-900 text-2xl">R$ 247,00</span> à vista
+              </p>
+              
+              <Button
+                variant="cta"
+                className="w-full md:w-auto text-xl max-md:text-lg max-md:px-8 px-12 py-7 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                size="lg"
+                onClick={() => {
+                  window.open(
+                    "https://pay.hub.la/QfP7RDivS3zNjbRWqtx6?_path=/checkout/QfP7RDivS3zNjbRWqtx6 ",
+                    "_blank"
+                  );
+                }}>
+                Quero me comunicar com confiança
+                <ArrowRight className="ml-2" />
+              </Button>
+              
+              
+            </div>
           </div>
         </div>
       </div>
